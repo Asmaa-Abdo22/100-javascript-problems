@@ -27,12 +27,63 @@
 // console.log(sumArray([1, 1, 11, 2, 3]));
 
 //& 4-  String-repeat
-function repeatStr(n, s) {
-  let result = "";
-  for (let i = 0; i < n; i++) {
-    result += s;
+// function repeatStr(n, s) {
+//   let result = "";
+//   for (let i = 0; i < n; i++) {
+//     result += s;
+//   }
+//   return result;
+// Another Solution -> return s.repeat(n);
+// }
+// console.log(repeatStr(5, "Hello"));
+
+//& 5-  Convert number to reversed array of digits
+// function digitize(n) {
+//   let newarr = [...n.toString()];
+//   let numed = newarr.map((item) => Number(item));
+//   return numed.reverse();
+
+// Another Solution -> return newarr = [...String(n)].reverse().map(Number)
+// }
+
+// console.log(digitize(35231));
+
+//& 6-  Counting sheep...
+function countSheeps(arrayOfSheep) {
+  let count = 0;
+  for (let i = 0; i < arrayOfSheep.length; i++) {
+    if (arrayOfSheep[i]) count++;
   }
-  return result;
-  // Another Solution -> return s.repeat(n);
+  return count;
+
+  // Another Solution -> return arrayOfSheep.filter(Boolean).length
 }
-console.log(repeatStr(5, "Hello"));
+
+const sheeps = [
+  true,
+  true,
+  true,
+  false,
+  true,
+  true,
+  true,
+  true,
+  true,
+  false,
+  true,
+  false,
+  true,
+  false,
+  false,
+  true,
+  true,
+  true,
+  true,
+  true,
+  false,
+  false,
+  true,
+  true,
+];
+
+console.log(countSheeps(sheeps));
