@@ -909,6 +909,16 @@
 //   );
 // }
 //& 104- Descending Order  [7KYU]
-function descendingOrder(n) {
-  return Number(n.toString().split("").sort((a, b) => b - a).join(""))
+// function descendingOrder(n) {
+//   return Number(n.toString().split("").sort((a, b) => b - a).join(""))
+// }
+//& 105- Get the Middle Character [7KYU]
+function getMiddle(s) {
+  let strLength = s.length;
+  let mid = Math.floor(strLength / 2);
+  if (strLength % 2 == 0) {
+    return `${s[mid - 1]}${s[mid]}`;
+  } else {
+    return `${s[mid]}`;
+  }
 }
