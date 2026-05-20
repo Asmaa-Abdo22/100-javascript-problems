@@ -913,12 +913,22 @@
 //   return Number(n.toString().split("").sort((a, b) => b - a).join(""))
 // }
 //& 105- Get the Middle Character [7KYU]
-function getMiddle(s) {
-  let strLength = s.length;
-  let mid = Math.floor(strLength / 2);
-  if (strLength % 2 == 0) {
-    return `${s[mid - 1]}${s[mid]}`;
-  } else {
-    return `${s[mid]}`;
+// function getMiddle(s) {
+//   let strLength = s.length;
+//   let mid = Math.floor(strLength / 2);
+//   if (strLength % 2 == 0) {
+//     return `${s[mid - 1]}${s[mid]}`;
+//   } else {
+//     return `${s[mid]}`;
+//   }
+// }
+//& 106- Mumbling [7KYU]
+function accum(s) {
+  let result = [];
+  for (let i = 0; i < s.length; i++) {
+    result.push(s[i].toUpperCase() + s[i].repeat(i).toLowerCase());
+    console.log(result);
   }
+  return result.join("-");
 }
+console.log(accum("RqaEzty")); // R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy
