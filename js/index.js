@@ -938,6 +938,19 @@
 // };
 // console.log(isSquare(2))
 //& 108- List Filtering [7KYU]
-function filter_list(l) {
-  return l.filter((x) => typeof x === "number");
+// function filter_list(l) {
+//   return l.filter((x) => typeof x === "number");
+// }
+//& 109- Isograms [7KYU]
+function isIsogram(str) {
+  // let newStr = str.toLowerCase;
+  // return new Set(newStr).size === str.length
+
+  str = str.toLowerCase();
+  for (let i = 0; i < str.length; i++) {
+    for (let j = i + 1; j < str.length; j++) {
+      if (str[i] === str[j]) return false;
+    }
+  }
+  return true;
 }
