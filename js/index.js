@@ -923,12 +923,21 @@
 //   }
 // }
 //& 106- Mumbling [7KYU]
-function accum(s) {
-  let result = [];
-  for (let i = 0; i < s.length; i++) {
-    result.push(s[i].toUpperCase() + s[i].repeat(i).toLowerCase());
-    console.log(result);
-  }
-  return result.join("-");
+// function accum(s) {
+//   let result = [];
+//   for (let i = 0; i < s.length; i++) {
+//     result.push(s[i].toUpperCase() + s[i].repeat(i).toLowerCase());
+//     console.log(result);
+//   }
+//   return result.join("-");
+// }
+// console.log(accum("RqaEzty")); // R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy
+//& 107- You're a square! [7KYU]
+// var isSquare = function (n) {
+//   return Number.isInteger(Math.sqrt(n) )
+// };
+// console.log(isSquare(2))
+//& 108- List Filtering [7KYU]
+function filter_list(l) {
+  return l.filter((x) => typeof x === "number");
 }
-console.log(accum("RqaEzty")); // R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy
