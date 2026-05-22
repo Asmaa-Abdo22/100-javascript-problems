@@ -942,15 +942,29 @@
 //   return l.filter((x) => typeof x === "number");
 // }
 //& 109- Isograms [7KYU]
-function isIsogram(str) {
-  // let newStr = str.toLowerCase;
-  // return new Set(newStr).size === str.length
+// function isIsogram(str) {
+//   // let newStr = str.toLowerCase;
+//   // return new Set(newStr).size === str.length
 
+//   str = str.toLowerCase();
+//   for (let i = 0; i < str.length; i++) {
+//     for (let j = i + 1; j < str.length; j++) {
+//       if (str[i] === str[j]) return false;
+//     }
+//   }
+//   return true;
+// }
+//& 110- Exes and Ohs [7KYU]
+function XO(str) {
+  let xCount = 0;
+  let oCount = 0;
   str = str.toLowerCase();
   for (let i = 0; i < str.length; i++) {
-    for (let j = i + 1; j < str.length; j++) {
-      if (str[i] === str[j]) return false;
+    if (str[i] === "o") {
+      oCount++;
+    } else if (str[i] === "x") {
+      xCount++;
     }
   }
-  return true;
+  return xCount === oCount;
 }
