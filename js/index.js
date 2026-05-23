@@ -955,16 +955,30 @@
 //   return true;
 // }
 //& 110- Exes and Ohs [7KYU]
-function XO(str) {
-  let xCount = 0;
-  let oCount = 0;
-  str = str.toLowerCase();
-  for (let i = 0; i < str.length; i++) {
-    if (str[i] === "o") {
-      oCount++;
-    } else if (str[i] === "x") {
-      xCount++;
+// function XO(str) {
+//   let xCount = 0;
+//   let oCount = 0;
+//   str = str.toLowerCase();
+//   for (let i = 0; i < str.length; i++) {
+//     if (str[i] === "o") {
+//       oCount++;
+//     } else if (str[i] === "x") {
+//       xCount++;
+//     }
+//   }
+//   return xCount === oCount;
+// }
+//& 111- Shortest Word [7KYU]
+function findShort(s) {
+  // return Math.min(...s.split(" ").map((item) => item.length));
+  let words = s.split(" ");
+  let shortestLength = words[0].length;
+  for (let i = 0; i < words.length; i++) {
+    if (words[i].length < shortestLength) {
+      shortestLength = words[i].length;
     }
   }
-  return xCount === oCount;
+  return shortestLength;
 }
+
+console.log(findShort("bitcoin take over the world"));
