@@ -969,16 +969,24 @@
 //   return xCount === oCount;
 // }
 //& 111- Shortest Word [7KYU]
-function findShort(s) {
-  // return Math.min(...s.split(" ").map((item) => item.length));
-  let words = s.split(" ");
-  let shortestLength = words[0].length;
-  for (let i = 0; i < words.length; i++) {
-    if (words[i].length < shortestLength) {
-      shortestLength = words[i].length;
-    }
-  }
-  return shortestLength;
-}
+// function findShort(s) {
+//   // return Math.min(...s.split(" ").map((item) => item.length));
+//   let words = s.split(" ");
+//   let shortestLength = words[0].length;
+//   for (let i = 0; i < words.length; i++) {
+//     if (words[i].length < shortestLength) {
+//       shortestLength = words[i].length;
+//     }
+//   }
+//   return shortestLength;
+// }
 
-console.log(findShort("bitcoin take over the world"));
+// console.log(findShort("bitcoin take over the world"));
+//& 112- Jaden Casing Strings [7KYU]
+Object.defineProperty(String.prototype, "toJadenCase", {
+  value: function toJadenCase() {
+    return this.split(" ")
+      .map((item) => item[0].toUpperCase() + item.slice(1))
+      .join(" ");
+  },
+});
