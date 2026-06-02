@@ -983,10 +983,21 @@
 
 // console.log(findShort("bitcoin take over the world"));
 //& 112- Jaden Casing Strings [7KYU]
-Object.defineProperty(String.prototype, "toJadenCase", {
-  value: function toJadenCase() {
-    return this.split(" ")
-      .map((item) => item[0].toUpperCase() + item.slice(1))
-      .join(" ");
-  },
-});
+// Object.defineProperty(String.prototype, "toJadenCase", {
+//   value: function toJadenCase() {
+//     return this.split(" ")
+//       .map((item) => item[0].toUpperCase() + item.slice(1))
+//       .join(" ");
+//   },
+// });
+//& 113-  Don't give me five [7KYU]
+function dontGiveMeFive(start, end) {
+  let count = 0;
+  for (let i = start; i <= end; i++) {
+    
+    if (!i.toString().includes("5")) {
+      count++;
+    }
+  }
+  return count;
+}
